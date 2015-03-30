@@ -1,0 +1,6 @@
+  [1m[36m (354.5ms)[0m  [1mCREATE DATABASE "yelp_clone_test" ENCODING = 'unicode'[0m
+  [1m[36m (148.1ms)[0m  [1mDROP DATABASE IF EXISTS "yelp_clone_test"[0m
+  [1m[35m (1303.6ms)[0m  CREATE DATABASE "yelp_clone_test" ENCODING = 'unicode'
+  [1m[36m (21.3ms)[0m  [1mBEGIN[0m
+Started GET "/resaurants" for 127.0.0.1 at 2015-03-30 12:26:32 +0100
+  [1m[35m (0.2ms)[0m  ROLLBACK
