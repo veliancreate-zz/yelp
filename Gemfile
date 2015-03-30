@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'haml'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -47,5 +48,6 @@ end
 group :test do 
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'rspec-collection_matchers'
 end  
 
