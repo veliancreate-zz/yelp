@@ -66,6 +66,14 @@ feature 'restaurants' do
         expect(page).to have_content 'Kentucky Fried Chicken'
         expect(current_path).to eq '/restaurants'
       end
+
+      scenario "you can't edit a restaurant if you aren't logged in" do 
+        visit '/restaurants'
+        click_link 'Sign out'
+        click_link 'Edit KFC'
+        expect(page).not_to have_content 'Update Restaurant'    
+      end
+
     end
 
     context 'an invalid restaurant' do
@@ -97,11 +105,16 @@ feature 'restaurants' do
         expect(page).not_to have_content 'KFC'
       end
 
-      scenario "you can't edit a restaurant if you aren't logged in" do 
+      scenario "you can't edit a restaurant that you didnt create" do 
         visit '/restaurants'
-        click_link 'Sign out'
+        click_link('Sign out')
+        click_link('Sign up')
+        fill_in('Email', with: 'test_alt@example.com')
+        fill_in('Password', with: 'test1test1')
+        fill_in('Password confirmation', with: 'test1test1')
+        click_button('Sign up')
         click_link 'Edit KFC'
-        expect(page).not_to have_content 'Update Restaurant'    
+        expect(page)not_to have_content 'Update Restaurant'   
       end   
     end 
   end    
