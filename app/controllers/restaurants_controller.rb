@@ -11,7 +11,7 @@ class RestaurantsController < ApplicationController
   end
   
   def create
-    @restaurant = Restaurant.create(restaurant_params)
+    @restaurant = Restaurant.create(options = {:name => restaurant_params[:name], :user_id => current_user.id} )
     if @restaurant.save  
       flash[:notice] = 'Restaurant added successfully'
       redirect_to restaurants_path
@@ -34,15 +34,22 @@ class RestaurantsController < ApplicationController
 
   def update
     @restaurant = Restaurant.find(params[:id])
-    @restaurant.update(restaurant_params)
-
+    if current_user.has_created?(@restaurant)  
+      @restaurant.update(restaurant_params)
+    else
+      flash[:notice] = 'You cant update a restaurant you didnt create'  
+    end
     redirect_to '/restaurants'
   end
 
   def destroy
     @restaurant = Restaurant.find(params[:id])
-    @restaurant.destroy
-    flash[:notice] = 'Restaurant deleted successfully'
+    if current_user.has_created?(@restaurant)
+      @restaurant.destroy
+      flash[:notice] = 'Restaurant deleted successfully'
+    else 
+      flash[:notice] = 'You can only delete restaurants you created'
+    end    
     redirect_to '/restaurants'
   end
 

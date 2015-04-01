@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "restaurants#index"
 
   resources :restaurants do
-    resources :reviews
+    resources :reviews  
   end
 
   get '/auth/:facebook/callback', to: 'sessions#create'

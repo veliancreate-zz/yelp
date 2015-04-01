@@ -12,4 +12,6 @@ describe Review, :type => :model do
     expect(review.restaurant).to eq(restaurant)
   end
 
+  it { is_expected.to belong_to :user }
+
 end

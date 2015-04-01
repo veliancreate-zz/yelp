@@ -12,5 +12,7 @@ describe Restaurant, :type => :model do
     restaurant = Restaurant.new(name: "Moe's Tavern")
     expect(restaurant).to have(1).error_on(:name)
   end
+
+  it { is_expected.to have_many :reviews }
   
 end

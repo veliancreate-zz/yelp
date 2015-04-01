@@ -114,7 +114,7 @@ feature 'restaurants' do
         fill_in('Password confirmation', with: 'test1test1')
         click_button('Sign up')
         click_link 'Edit KFC'
-        expect(page)not_to have_content 'Update Restaurant'   
+        expect(page).not_to have_content 'Update Restaurant'   
       end   
     end 
   end    
