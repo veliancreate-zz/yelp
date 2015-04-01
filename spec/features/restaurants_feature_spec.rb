@@ -114,8 +114,20 @@ feature 'restaurants' do
         fill_in('Password confirmation', with: 'test1test1')
         click_button('Sign up')
         click_link 'Edit KFC'
-        expect(page).not_to have_content 'Update Restaurant'   
-      end   
+        click_button 'Update Restaurant'
+        expect(page).to have_content 'You cant update a restaurant you didnt create'    
+      end
+      scenario "you can't delete a restaurant that you didnt create" do 
+        visit '/restaurants'
+        click_link('Sign out')
+        click_link('Sign up')
+        fill_in('Email', with: 'test_alt@example.com')
+        fill_in('Password', with: 'test1test1')
+        fill_in('Password confirmation', with: 'test1test1')
+        click_button('Sign up')
+        click_link 'Delete KFC'
+        expect(page).to have_content 'You can only delete restaurants you created'   
+      end    
     end 
   end    
 end  
