@@ -117,7 +117,7 @@ feature 'restaurants' do
         visit '/restaurants'
         click_link('Sign out')
         click_link('Sign up')
-        fill_in('Email', with: 'test_alt@example.com')
+        fill_in('Email', with: 'test2@example.com')
         fill_in('Password', with: 'test1test1')
         fill_in('Password confirmation', with: 'test1test1')
         click_button('Sign up')
