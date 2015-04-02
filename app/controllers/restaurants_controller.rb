@@ -11,7 +11,7 @@ class RestaurantsController < ApplicationController
   end
   
   def create
-    @restaurant = Restaurant.create(options = {:name => restaurant_params[:name], :user_id => current_user.id} )
+    @restaurant = Restaurant.create(options = {:name => restaurant_params[:name], :user => current_user} )
     if @restaurant.save  
       flash[:notice] = 'Restaurant added successfully'
       redirect_to restaurants_path

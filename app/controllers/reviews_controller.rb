@@ -10,11 +10,10 @@ class ReviewsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
     if current_user.has_reviewed? @restaurant
       flash[:notice] = 'You can only write one review per restaurant'        
-      redirect_to restaurants_path
     else
-      @restaurant.reviews.create(options = {:thoughts => review_params[:thoughts], :rating => review_params[:rating], :user_id => current_user.id} )
-      redirect_to restaurants_path
+      @restaurant.create_review(review_params, current_user)
     end  
+    redirect_to restaurants_path
   end
 
   def review_params
