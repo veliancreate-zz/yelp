@@ -1,5 +1,19 @@
 require 'rails_helper'
 
+def sign_up
+  click_link('Sign up')
+  fill_in('Email', with: 'test@example.com')
+  fill_in('Password', with: 'testtest')
+  fill_in('Password confirmation', with: 'testtest')
+  click_button('Sign up')
+end 
+
+def create_restaurant
+  click_link 'Add a restaurant'
+  fill_in 'Name', with: 'KFC'
+  click_button 'Create Restaurant'
+end  
+
 feature 'restaurants' do 
 
   feature 'restaurants logged out' do
@@ -36,30 +50,23 @@ feature 'restaurants' do
     
     before do
       visit('/')
-      click_link('Sign up')
-      fill_in('Email', with: 'test@example.com')
-      fill_in('Password', with: 'testtest')
-      fill_in('Password confirmation', with: 'testtest')
-      click_button('Sign up')
+      sign_up
     end
 
     context 'creating restaurants' do 
       scenario 'prompts user' do 
         visit '/restaurants'
-        click_link 'Add a restaurant'
-        fill_in 'Name', with: 'KFC'
-        click_button 'Create Restaurant'
+        create_restaurant
         expect(page).to have_content 'KFC'
         expect(current_path).to eq '/restaurants'
       end  
     end
   
     context 'editing restaurants' do
-
-      before {Restaurant.create name: 'KFC'}
-
+      
       scenario 'let a user edit a restaurant' do
-        visit '/restaurants'
+        visit '/'
+        create_restaurant
         click_link 'Edit KFC'
         fill_in 'Name', with: 'Kentucky Fried Chicken'
         click_button 'Update Restaurant'
@@ -68,7 +75,8 @@ feature 'restaurants' do
       end
 
       scenario "you can't edit a restaurant if you aren't logged in" do 
-        visit '/restaurants'
+        visit '/'
+        create_restaurant
         click_link 'Sign out'
         click_link 'Edit KFC'
         expect(page).not_to have_content 'Update Restaurant'    
@@ -89,7 +97,7 @@ feature 'restaurants' do
 
     context 'deleting restaurants' do
 
-      before {Restaurant.create name: 'KFC'}
+      before {create_restaurant}
 
       scenario 'removes a restaurant when a user clicks a delete link' do
         visit '/restaurants'
