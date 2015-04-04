@@ -7,12 +7,15 @@ class ReviewsController < ApplicationController
 
   def create
     @restaurant = Restaurant.find(params[:restaurant_id])
-    if current_user.has_reviewed? @restaurant
-      flash[:notice] = 'You can only write one review per restaurant'        
-    else
-      @restaurant.create_review(review_params, current_user)
-    end
-    console  
+    if current_user  
+      if current_user.has_reviewed? @restaurant
+        flash[:notice] = 'You can only write one review per restaurant'        
+      else
+        @restaurant.create_review(review_params, current_user)
+      end
+    else 
+      flash[:notice] = 'You can only review if you are logged in'
+    end      
     redirect_to restaurants_path
   end
 

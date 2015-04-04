@@ -25554,3 +25554,1126 @@ Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for
 
 
 Started GET "/assets/application-5eb2c34cc52a7803e86b301c1b08b2b2.js?body=1" for ::1 at 2015-04-02 17:15:23 +0100
+
+
+Started GET "/" for ::1 at 2015-04-04 17:56:13 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (35.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#index as HTML
+  [1m[35m (79.6ms)[0m  SELECT COUNT(*) FROM "restaurants"
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mReview Exists (33.7ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 9]]
+  [1m[36mReview Load (0.5ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 9]]
+  Rendered restaurants/index.html.haml within layouts/application (299.1ms)
+Completed 200 OK in 679ms (Views: 413.4ms | ActiveRecord: 250.3ms)
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:56:14 +0100
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-04-04 17:56:15 +0100
+
+
+Started GET "/assets/javascripts/facebook_sdk.js" for ::1 at 2015-04-04 17:56:15 +0100
+
+ActionController::RoutingError (No route matches [GET] "/assets/javascripts/facebook_sdk.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (125.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (58.6ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (145.2ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-04 17:56:15 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-04 17:56:15 +0100
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:56:15 +0100
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-04 17:56:15 +0100
+
+
+Started GET "/assets/facebook_sdk-753855add4f3a32cc37527549296c6f0.js?body=1" for ::1 at 2015-04-04 17:56:15 +0100
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:56:15 +0100
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:56:15 +0100
+
+
+Started GET "/assets/application-5eb2c34cc52a7803e86b301c1b08b2b2.js?body=1" for ::1 at 2015-04-04 17:56:15 +0100
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-04-04 17:56:21 +0100
+
+
+Started GET "/users/auth/facebook" for ::1 at 2015-04-04 17:56:22 +0100
+
+
+Started GET "/users/auth/facebook/callback?code=AQAXEeL2ARuWwGoTZgaoPJQorlKU1ZxnMeNaViwPSnn8xgggHt929oFqqO6WtIWqY6fm15tQleDdg_s6uArfX_U1n1Cik8q63zmB1AITwgxkM4jjmihXIClrnnxZiwpDMqfCi_6iFf8CTBJSZ0MGYX1qEnAtYsiXVUHE_QoTgWFqUWB214Zv-Bb3qRLytdmCJ19cYWgEwbqnD113JJ2Iccgw__qUr3S7k4cRwoQhdRscYjgLefzsaJLC6zrQXcjYLHftUxb9uZp9QnlYAya9Vk_pDuvIUtwvplC6QQvbP0UKOJG45wE4kCGkMafXQH4ubyU&state=d1c0e71390b3314335e56f1a7cb92ea3d8894aff256c8d4f" for ::1 at 2015-04-04 17:56:22 +0100
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAXEeL2ARuWwGoTZgaoPJQorlKU1ZxnMeNaViwPSnn8xgggHt929oFqqO6WtIWqY6fm15tQleDdg_s6uArfX_U1n1Cik8q63zmB1AITwgxkM4jjmihXIClrnnxZiwpDMqfCi_6iFf8CTBJSZ0MGYX1qEnAtYsiXVUHE_QoTgWFqUWB214Zv-Bb3qRLytdmCJ19cYWgEwbqnD113JJ2Iccgw__qUr3S7k4cRwoQhdRscYjgLefzsaJLC6zrQXcjYLHftUxb9uZp9QnlYAya9Vk_pDuvIUtwvplC6QQvbP0UKOJG45wE4kCGkMafXQH4ubyU", "state"=>"d1c0e71390b3314335e56f1a7cb92ea3d8894aff256c8d4f"}
+  [1m[35mUser Load (63.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = $1 AND "users"."uid" = $2  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "10153200262144805"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (10.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-04-02 15:37:09.791244"], ["current_sign_in_at", "2015-04-04 16:56:24.168315"], ["sign_in_count", 8], ["updated_at", "2015-04-04 16:56:24.171099"], ["id", 4]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 124ms (ActiveRecord: 75.4ms)
+
+
+Started GET "/" for ::1 at 2015-04-04 17:56:24 +0100
+Processing by RestaurantsController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "restaurants"
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mReview Exists (0.3ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 9]]
+  [1m[36mReview Load (0.3ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 9]]
+  Rendered restaurants/index.html.haml within layouts/application (5.3ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+Completed 200 OK in 72ms (Views: 69.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:56:24 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-04 17:56:24 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-04 17:56:24 +0100
+
+
+Started GET "/assets/javascripts/facebook_sdk.js" for ::1 at 2015-04-04 17:56:24 +0100
+
+ActionController::RoutingError (No route matches [GET] "/assets/javascripts/facebook_sdk.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (106.1ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (61.6ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (133.2ms)
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:56:24 +0100
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-04-04 17:56:24 +0100
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-04 17:56:24 +0100
+
+
+Started GET "/assets/facebook_sdk-753855add4f3a32cc37527549296c6f0.js?body=1" for ::1 at 2015-04-04 17:56:24 +0100
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:56:24 +0100
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:56:24 +0100
+
+
+Started GET "/assets/application-5eb2c34cc52a7803e86b301c1b08b2b2.js?body=1" for ::1 at 2015-04-04 17:56:24 +0100
+
+
+Started GET "/restaurants/new" for ::1 at 2015-04-04 17:56:29 +0100
+Processing by RestaurantsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered restaurants/new.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/restaurants" for ::1 at 2015-04-04 17:56:33 +0100
+Processing by RestaurantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HvD+mgAWtHzpH//7DmRcjJzBWj2QHXij43k3sgf4ok3ijFMo8ZNKv9k+y/Wi5SVggGRNm2iXIOU01LU+kWD5yA==", "restaurant"=>{"name"=>"Curry"}, "commit"=>"Create Restaurant"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.3ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."name" = 'Curry' LIMIT 1
+  [1m[36mSQL (59.5ms)[0m  [1mINSERT INTO "restaurants" ("name", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Curry"], ["user_id", 4], ["created_at", "2015-04-04 16:56:33.814790"], ["updated_at", "2015-04-04 16:56:33.814790"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.4ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE ("restaurants"."name" = 'Curry' AND "restaurants"."id" != 11) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants
+Completed 302 Found in 70ms (ActiveRecord: 61.4ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-04-04 17:56:33 +0100
+Processing by RestaurantsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "restaurants"
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mReview Exists (0.2ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 9]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 9]]
+  [1m[35mReview Exists (0.2ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 11]]
+  Rendered restaurants/index.html.haml within layouts/application (5.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:56:34 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-04 17:56:34 +0100
+
+
+Started GET "/assets/javascripts/facebook_sdk.js" for ::1 at 2015-04-04 17:56:34 +0100
+
+ActionController::RoutingError (No route matches [GET] "/assets/javascripts/facebook_sdk.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (104.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (59.0ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (133.4ms)
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:56:34 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-04 17:56:34 +0100
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-04-04 17:56:34 +0100
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-04 17:56:34 +0100
+
+
+Started GET "/assets/facebook_sdk-753855add4f3a32cc37527549296c6f0.js?body=1" for ::1 at 2015-04-04 17:56:34 +0100
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:56:34 +0100
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:56:34 +0100
+
+
+Started GET "/assets/application-5eb2c34cc52a7803e86b301c1b08b2b2.js?body=1" for ::1 at 2015-04-04 17:56:34 +0100
+
+
+Started GET "/restaurants/11/reviews/new" for ::1 at 2015-04-04 17:56:37 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"11"}
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered reviews/new.html.haml within layouts/application (5.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/restaurants/11/reviews" for ::1 at 2015-04-04 17:56:47 +0100
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TvVxO0j9YdGuzQ58hbw7C80nZVmJD8R9KSE/JKwYz/2yidyJuXifEp7sOnIpPULn0YJy/3GFnDv+jL2oOoCUeA==", "review"=>{"thoughts"=>"Great", "rating"=>"3"}, "commit"=>"Leave Review", "restaurant_id"=>"11"}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mRestaurant Exists (0.4ms)[0m  SELECT  1 AS one FROM "restaurants" INNER JOIN "reviews" ON "restaurants"."id" = "reviews"."restaurant_id" WHERE "reviews"."user_id" = $1 AND "restaurants"."id" = $2 LIMIT 1  [["user_id", 4], ["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (70.6ms)[0m  INSERT INTO "reviews" ("thoughts", "rating", "user_id", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["thoughts", "Great"], ["rating", 3], ["user_id", 4], ["restaurant_id", 11], ["created_at", "2015-04-04 16:56:47.033952"], ["updated_at", "2015-04-04 16:56:47.033952"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants
+Completed 302 Found in 91ms (ActiveRecord: 72.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (60.9ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (116.8ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-04-04 17:56:47 +0100
+Processing by RestaurantsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "restaurants"
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mReview Exists (0.2ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 9]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 9]]
+  [1m[35mReview Exists (0.2ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 11]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 11]]
+  Rendered restaurants/index.html.haml within layouts/application (6.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:56:47 +0100
+
+
+Started GET "/assets/javascripts/facebook_sdk.js" for ::1 at 2015-04-04 17:56:47 +0100
+
+ActionController::RoutingError (No route matches [GET] "/assets/javascripts/facebook_sdk.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (103.2ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (61.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (141.3ms)
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-04 17:56:47 +0100
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:56:47 +0100
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-04-04 17:56:47 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-04 17:56:47 +0100
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-04 17:56:47 +0100
+
+
+Started GET "/assets/facebook_sdk-753855add4f3a32cc37527549296c6f0.js?body=1" for ::1 at 2015-04-04 17:56:47 +0100
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:56:47 +0100
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:56:47 +0100
+
+
+Started GET "/assets/application-5eb2c34cc52a7803e86b301c1b08b2b2.js?body=1" for ::1 at 2015-04-04 17:56:47 +0100
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-04-04 17:56:55 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HWb3ctR3lJ1QEkkhmIU7e/1k8EbgHpsrUrdXkpSnjDnhGlrAJfJqXmAzfS80BEKX4cHn4BiUw22FGtUeAj/XvA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2015-04-04 17:56:55 +0100
+Processing by RestaurantsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "restaurants"
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mReview Exists (0.3ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 9]]
+  [1m[36mReview Load (0.4ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 9]]
+  [1m[35mReview Exists (0.2ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 11]]
+  [1m[36mReview Load (0.1ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 11]]
+  Rendered restaurants/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/javascripts/facebook_sdk.js" for ::1 at 2015-04-04 17:56:55 +0100
+
+ActionController::RoutingError (No route matches [GET] "/assets/javascripts/facebook_sdk.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (60.9ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (134.2ms)
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-04-04 17:56:55 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-04 17:56:55 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-04 17:56:55 +0100
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:56:55 +0100
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:56:55 +0100
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-04 17:56:55 +0100
+
+
+Started GET "/assets/facebook_sdk-753855add4f3a32cc37527549296c6f0.js?body=1" for ::1 at 2015-04-04 17:56:55 +0100
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:56:55 +0100
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:56:55 +0100
+
+
+Started GET "/assets/application-5eb2c34cc52a7803e86b301c1b08b2b2.js?body=1" for ::1 at 2015-04-04 17:56:55 +0100
+
+
+Started GET "/users/sign_in" for ::1 at 2015-04-04 17:56:57 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 71ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-04-04 17:57:03 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8nYbtkFQ31njzaMem8Ii590+YHQLCGTfnwvqkovA2mDGqDvAEG+G1DGRDqXHsN6+pCpSydKTG2K6aDgxGqPa3g==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (34.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "test@test.com"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-04-02 15:41:14.705125"], ["current_sign_in_at", "2015-04-04 16:57:03.578679"], ["sign_in_count", 5], ["updated_at", "2015-04-04 16:57:03.580938"], ["id", 5]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 177ms (ActiveRecord: 35.4ms)
+
+
+Started GET "/" for ::1 at 2015-04-04 17:57:03 +0100
+Processing by RestaurantsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "restaurants"
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mReview Exists (0.2ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 9]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 9]]
+  [1m[35mReview Exists (0.2ms)[0m  SELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1  [["restaurant_id", 11]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 11]]
+  Rendered restaurants/index.html.haml within layouts/application (7.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/javascripts/facebook_sdk.js" for ::1 at 2015-04-04 17:57:03 +0100
+
+ActionController::RoutingError (No route matches [GET] "/assets/javascripts/facebook_sdk.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.8ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (108.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (64.8ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (138.6ms)
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:57:03 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-04 17:57:03 +0100
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:57:04 +0100
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-04-04 17:57:04 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-04 17:57:04 +0100
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-04 17:57:04 +0100
+
+
+Started GET "/assets/facebook_sdk-753855add4f3a32cc37527549296c6f0.js?body=1" for ::1 at 2015-04-04 17:57:04 +0100
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:57:04 +0100
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:57:04 +0100
+
+
+Started GET "/assets/application-5eb2c34cc52a7803e86b301c1b08b2b2.js?body=1" for ::1 at 2015-04-04 17:57:04 +0100
+
+
+Started GET "/restaurants/11/reviews/new" for ::1 at 2015-04-04 17:57:07 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"11"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  Rendered reviews/new.html.haml within layouts/application (2.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/restaurants/11/reviews" for ::1 at 2015-04-04 17:57:10 +0100
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kp0P/yVEiyzv7qaDPWBAEtvjW5wG8LGkvceAH9XOnsTfP7I5UPfgyRpv3bRXyikidhREpFmDp6AfjlYL1oNI8g==", "review"=>{"thoughts"=>"asdkfjhk", "rating"=>"1"}, "commit"=>"Leave Review", "restaurant_id"=>"11"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mRestaurant Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "restaurants" INNER JOIN "reviews" ON "restaurants"."id" = "reviews"."restaurant_id" WHERE "reviews"."user_id" = $1 AND "restaurants"."id" = $2 LIMIT 1[0m  [["user_id", 5], ["id", 11]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "reviews" ("thoughts", "rating", "user_id", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["thoughts", "asdkfjhk"], ["rating", 1], ["user_id", 5], ["restaurant_id", 11], ["created_at", "2015-04-04 16:57:10.870118"], ["updated_at", "2015-04-04 16:57:10.870118"]]
+  [1m[35m (15.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/restaurants
+Completed 302 Found in 27ms (ActiveRecord: 17.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (58.7ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (116.8ms)
+
+
+Started GET "/restaurants" for ::1 at 2015-04-04 17:57:11 +0100
+Processing by RestaurantsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "restaurants"[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36mReview Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1[0m  [["restaurant_id", 9]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1  [["restaurant_id", 9]]
+  [1m[36mReview Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "reviews" WHERE "reviews"."restaurant_id" = $1 LIMIT 1[0m  [["restaurant_id", 11]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1  [["restaurant_id", 11]]
+  Rendered restaurants/index.html.haml within layouts/application (7.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/javascripts/facebook_sdk.js" for ::1 at 2015-04-04 17:57:11 +0100
+
+ActionController::RoutingError (No route matches [GET] "/assets/javascripts/facebook_sdk.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (109.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (59.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (132.9ms)
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-04-04 17:57:11 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-04 17:57:11 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-04 17:57:11 +0100
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:57:11 +0100
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 17:57:11 +0100
+
+
+Started GET "/assets/facebook_sdk-753855add4f3a32cc37527549296c6f0.js?body=1" for ::1 at 2015-04-04 17:57:11 +0100
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-04 17:57:11 +0100
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:57:11 +0100
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 17:57:11 +0100
+
+
+Started GET "/assets/application-5eb2c34cc52a7803e86b301c1b08b2b2.js?body=1" for ::1 at 2015-04-04 17:57:11 +0100
+
+
+Started GET "/restaurants" for ::1 at 2015-04-04 18:02:16 +0100
+Processing by RestaurantsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "restaurants"
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT "restaurants".* FROM "restaurants"[0m
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1  [["restaurant_id", 9]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 9]]
+  [1m[35mReview Load (0.2ms)[0m  SELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1  [["restaurant_id", 11]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 11]]
+  Rendered restaurants/index.html.haml within layouts/application (30.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+Completed 200 OK in 101ms (Views: 91.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 18:02:16 +0100
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 18:02:16 +0100
+
+
+Started GET "/assets/javascripts/facebook_sdk.js" for ::1 at 2015-04-04 18:02:16 +0100
+
+ActionController::RoutingError (No route matches [GET] "/assets/javascripts/facebook_sdk.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (102.8ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (63.6ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (137.5ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-04 18:02:16 +0100
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-04-04 18:02:16 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-04 18:02:17 +0100
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-04 18:02:17 +0100
+
+
+Started GET "/assets/facebook_sdk-753855add4f3a32cc37527549296c6f0.js?body=1" for ::1 at 2015-04-04 18:02:17 +0100
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 18:02:17 +0100
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 18:02:17 +0100
+
+
+Started GET "/assets/application-5eb2c34cc52a7803e86b301c1b08b2b2.js?body=1" for ::1 at 2015-04-04 18:02:17 +0100
+
+
+Started GET "/restaurants" for ::1 at 2015-04-04 18:02:42 +0100
+Processing by RestaurantsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "restaurants"[0m
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 9]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."restaurant_id" = $1  [["restaurant_id", 9]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 11]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."restaurant_id" = $1  [["restaurant_id", 11]]
+  Rendered restaurants/index.html.haml within layouts/application (12.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/javascripts/facebook_sdk.js" for ::1 at 2015-04-04 18:02:42 +0100
+
+ActionController::RoutingError (No route matches [GET] "/assets/javascripts/facebook_sdk.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (104.6ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (60.9ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (135.1ms)
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 18:02:42 +0100
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 18:02:42 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-04 18:02:42 +0100
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-04-04 18:02:42 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-04 18:02:42 +0100
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-04 18:02:42 +0100
+
+
+Started GET "/assets/facebook_sdk-753855add4f3a32cc37527549296c6f0.js?body=1" for ::1 at 2015-04-04 18:02:42 +0100
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 18:02:42 +0100
+
+
+Started GET "/assets/application-5eb2c34cc52a7803e86b301c1b08b2b2.js?body=1" for ::1 at 2015-04-04 18:02:42 +0100
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 18:02:42 +0100
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-04-04 18:04:59 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0iRsHnmg/LMfWRuhLz/inzXosOeziJhmUdyv7hilycufhtHYDBOXVurYYJZFlYuvmB+v3+z7jmLzlXn6G+gf/Q=="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-04-04 18:04:59 +0100
+Processing by RestaurantsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "restaurants"[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 9]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."restaurant_id" = $1  [["restaurant_id", 9]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 11]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."restaurant_id" = $1  [["restaurant_id", 11]]
+  Rendered restaurants/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/javascripts/facebook_sdk.js" for ::1 at 2015-04-04 18:04:59 +0100
+
+ActionController::RoutingError (No route matches [GET] "/assets/javascripts/facebook_sdk.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (111.7ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (63.8ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (155.0ms)
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-04-04 18:05:00 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-04 18:05:00 +0100
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 18:05:00 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-04 18:05:00 +0100
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 18:05:00 +0100
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-04 18:05:00 +0100
+
+
+Started GET "/assets/facebook_sdk-753855add4f3a32cc37527549296c6f0.js?body=1" for ::1 at 2015-04-04 18:05:00 +0100
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 18:05:00 +0100
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 18:05:00 +0100
+
+
+Started GET "/assets/application-5eb2c34cc52a7803e86b301c1b08b2b2.js?body=1" for ::1 at 2015-04-04 18:05:00 +0100
+
+
+Started GET "/users/sign_in" for ::1 at 2015-04-04 18:05:01 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-04-04 18:21:01 +0100
+Processing by RestaurantsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "restaurants"[0m
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT "restaurants".* FROM "restaurants"
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 9]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."restaurant_id" = $1  [["restaurant_id", 9]]
+  [1m[36mReview Load (0.2ms)[0m  [1mSELECT "reviews".* FROM "reviews" WHERE "reviews"."restaurant_id" = $1[0m  [["restaurant_id", 11]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reviews" WHERE "reviews"."restaurant_id" = $1  [["restaurant_id", 11]]
+  Rendered restaurants/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 67ms (Views: 64.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application-5266d2988799ecc8fe6e81eaab412e7d.css?body=1" for ::1 at 2015-04-04 18:21:02 +0100
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-04 18:21:02 +0100
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-04 18:21:02 +0100
+
+
+Started GET "/assets/restaurants-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 18:21:02 +0100
+
+
+Started GET "/assets/reviews-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-04 18:21:02 +0100
+
+
+Started GET "/assets/javascripts/facebook_sdk.js" for ::1 at 2015-04-04 18:21:02 +0100
+
+ActionController::RoutingError (No route matches [GET] "/assets/javascripts/facebook_sdk.js"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/julianveling/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (110.1ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (60.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (144.1ms)
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-04 18:21:02 +0100
+
+
+Started GET "/assets/facebook_sdk-753855add4f3a32cc37527549296c6f0.js?body=1" for ::1 at 2015-04-04 18:21:02 +0100
+
+
+Started GET "/assets/restaurants-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 18:21:02 +0100
+
+
+Started GET "/assets/application-5eb2c34cc52a7803e86b301c1b08b2b2.js?body=1" for ::1 at 2015-04-04 18:21:02 +0100
+
+
+Started GET "/assets/reviews-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-04 18:21:02 +0100
+
+
+Started GET "/restaurants/9/reviews/new" for ::1 at 2015-04-04 18:21:07 +0100
+Processing by ReviewsController#new as HTML
+  Parameters: {"restaurant_id"=>"9"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  Rendered reviews/new.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/restaurants/9/reviews" for ::1 at 2015-04-04 18:21:10 +0100
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fynz0Ger1e552Pd/JUKUp+2Qsl4I9iQj2bRngRtejrzxqbU3gkuzonFx4gouReW+oWXAqlZWrRNp6/ODqg18Vw==", "review"=>{"thoughts"=>"aSD", "rating"=>"1"}, "commit"=>"Leave Review", "restaurant_id"=>"9"}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 9]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `has_reviewed?' for nil:NilClass):
+  app/controllers/reviews_controller.rb:10:in `create'
+
+
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.8ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (62.2ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/julianveling/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (138.2ms)

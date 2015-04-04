@@ -8,8 +8,9 @@
       data-share: "true"
       data-width: "450"
       data-show-faces: "true" 
+    %h3 Average rating: #{restaurant.average_rating.to_i}  
     %h3
-      Review for
+      Reviews for
       = restaurant.name 
     - if restaurant.reviews.any?
       %ul
