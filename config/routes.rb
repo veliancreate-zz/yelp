@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :restaurants do
+    resources :reviews  
+  end
+
   get '/auth/:facebook/callback', to: 'sessions#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

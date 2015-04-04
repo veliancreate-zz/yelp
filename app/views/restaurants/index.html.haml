@@ -18,6 +18,7 @@
       %ul
         - restaurant.reviews.each do |review|
           %li
+            %p= pluralize review.endorsements.count, 'endorsement'
             = review.thoughts
             %strong= review.rating
             = link_to "Delete #{restaurant.name} review", restaurant_review_path(restaurant, review), method: :delete  
